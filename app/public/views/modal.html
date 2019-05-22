@@ -1,0 +1,33 @@
+<div class="modal-header bg-primary">
+    <h2 class="modal-title" align="center">{{loginType}}</h2>
+</div>
+
+<div class="container-fluid">
+    <br>
+    <div class="row">
+        <div class="col-xs-12">
+            <div class="form-group">
+                <input class="form-control" type="text" placeholder="Username" ng-model="username"/>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-xs-12">
+            <div class="form-group">
+                <input class="form-control" type="password" placeholder="Password" ng-model="password"/>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-xs-6">
+            <button class="btn btn-warning btn-block" ng-class="{'btn-primary': loginType === 'Log In'}" ng-click="ok()">{{loginType}}</button>
+        </div>
+        <div class="col-xs-6">
+            <button class="btn btn-default btn-block" ng-click="cancel()">Cancel</button>
+        </div>
+    </div>
+
+    <br>
+</div>

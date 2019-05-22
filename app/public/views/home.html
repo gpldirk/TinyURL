@@ -1,0 +1,39 @@
+<div class="row">
+    <div class="col-md-6 col-md-offset-3">
+        <h4>Input your loooooooooooooog URL</h4>
+        <form ng-submit="submit()">
+            <div class="form-group">
+                <input type="text" class="form-control" ng-model="longUrl"/>
+            </div>
+            <input type="submit" class="btn btn-primary" value="Get Your TinyURL" />
+        </form>
+    </div>
+</div>
+<br>
+<br>
+
+
+<div class="row" ng-show="isLoggedIn">
+    <div class="col-md-12">
+        <div class="table-responsive">
+            <table class="table table-striped table-hover">
+                <thead>
+                    <tr>
+                        <th>Long URL</th>
+                        <th>Short URL</th>
+                        <th>Statistics</th>
+                        <th>Creation Time</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr ng-repeat="x in myUrls | orderBy: 'creationTime' : true">
+                        <td><a ng-href="{{x.longUrl}}" target="_blank">{{x.longUrl}}</a></td>
+                        <td><a ng-href="{{x.shortUrl}}" target="_blank">{{x.shortUrlToShow}}</a></td>
+                        <td><a ng-href="{{x.urlInfo}}"><span class="glyphicon glyphicon-stats"></span></a></td>
+                        <td>{{x.creationTime | date:'yyyy-MM-dd hh:mm a'}}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
