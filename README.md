@@ -15,7 +15,7 @@ git clone https://github.com/gpldirk/TinyURL.git
 ```
 
 
-start docker engine
+start docker engine \
 cd into the folder that contains docker-compose.yml
 ```
 docker-compose up --build
